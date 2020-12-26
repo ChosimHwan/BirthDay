@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['prefix'=>'letter'],function(){
+   Route::get('/','LetterController@letterList')->name('letterMain');
+   Route::get('/form','LetterController@letterForm')->name('letterForm');
+   Route::post('/save','LetterController@letterSave')->name('letterSave');
+});
