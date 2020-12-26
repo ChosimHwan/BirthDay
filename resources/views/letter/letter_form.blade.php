@@ -12,22 +12,42 @@
         .body-color{
             background-color: #aaf0d1;
         }
-        .input-wrap{
-            text-align: center;
-            width: 50%;
-            height: 80%;
-            position: fixed;
-            left:50%;
-            top:50%;
-            transform: translate(-50%, -50%);
-            overflow: hidden;
-            padding: 30px;
+        /*모바일화면*/
+        @media(max-width: 720px){
+            .input-wrap{
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .input-wrap input{
+                width:95%;
+                padding:10px;
+                font-size:16px;
+                text-align: center;
+            }
+            #user{
+                width: 95% !important;
+                margin-left: 0px !important;
+            }
         }
-        .input-wrap input{
-            width:95%;
-            padding:10px;
-            font-size:16px;
-            text-align: center;
+        /*PC화면*/
+        @media(min-width: 720px){
+            .input-wrap{
+                text-align: center;
+                width: 50%;
+                position: fixed;
+                left:50%;
+                top:50%;
+                transform: translate(-50%, -50%);
+                overflow: hidden;
+                padding: 30px;
+            }
+            .input-wrap input{
+                width:95%;
+                padding:10px;
+                font-size:16px;
+                text-align: center;
+            }
         }
         .title-wrap{
             margin: 15px 0;

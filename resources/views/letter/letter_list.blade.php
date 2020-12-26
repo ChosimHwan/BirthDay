@@ -2,6 +2,29 @@
 @section('title','롤링페이퍼')
 @push('css')
 <style>
+    /*모바일화면*/
+    @media(max-width: 720px){
+        .letter-content{
+            width: 35% !important;
+            font-size: 15px !important;
+            margin: 0 10px 50px 10px !important;
+        }
+        .latter-box{
+            height: 50%;
+            overflow: scroll;
+        }
+        .rolling-btn{
+            padding: 20px 0 !important;
+            width: 100% !important;
+        }
+        .to_user{
+            position: relative !important;
+            top: -28px !important;
+        }
+    }
+    /*PC화면*/
+    @media(min-width: 720px){
+    }
     .letter-wrap{
         display:flex;
         align-items: center;
@@ -15,8 +38,7 @@
         padding: 40px 10px;
         border-radius: 20px;
         text-align: center;
-        margin-right: 20px;
-        margin-bottom:50px;
+        margin: 0 20px 50px 20px;
         box-shadow: 1px 5px 5px;
         font-size: 20px;
         cursor: pointer;
@@ -48,7 +70,7 @@
         display: none;
     }
     .latter-box{
-        width: 570px;
+        width: 50%;
         padding: 90px 40px;
         background-color: #fff;
         z-index: 9999;
@@ -90,7 +112,6 @@
     <!-- Modal창-->
     <div class="layout"></div>
     <div class="latter-box">
-        세은아사랑해
     </div>
 @endsection
 @push('scripts')
